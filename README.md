@@ -8,4 +8,4 @@
 ```
 # Introduction
 # Installation
-# Quick start
+# How to use
