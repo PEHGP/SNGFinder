@@ -3,4 +3,4 @@ SNGFinder is a tool for identifying new genes based on the syntenic method. It r
 # Installation
 
 # How to use
-## 1. Repeat Masker
+### 1. Repeat Masker
