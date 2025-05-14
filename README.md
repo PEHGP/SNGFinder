@@ -3,6 +3,9 @@ SNGFinder is a tool for identifying new genes based on the syntenic method. It r
 # Installation
 
 # How to use
+1. Repeat masker
+2. Whole genome alignment
+3. Identification of new genes
 ## 1. Repeat masker
 If the genome has been repeat soft-masked, skip this step.  
 The genomes downloaded from NCBI or ensemble usually have been repeat soft-masked.  
@@ -11,9 +14,10 @@ The genomes downloaded from NCBI or ensemble usually have been repeat soft-maske
 windowmasker -mk_counts -in genome.fasta -out genome.counts
 windowmasker -ustat genome.counts -in genome.fasta -out genome_masked.fasta -dust true -outfmt fasta
 ```
-`genome_masked.fasta` is the repeat soft-masking fasta file.
+`genome_masked.fasta` is the repeat soft-masking fasta file for whole genome alignment.
+
 ## 2. Whole genome alignment
-### Alignment
+### 2.1 Alignment
 ```
 cactus --binariesMode local --defaultMemory 100G --defaultDisk 30G job_store SpAll.txt SpAll.hal
 ```
@@ -35,7 +39,7 @@ Sp9 Sp9_genome.fasta.gz
 ```
 `SpAll.hal` is cactus output  
 [Cactus](https://github.com/ComparativeGenomicsToolkit/cactus) may be slow, so you can use a [cluster](https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/progressive.md#running-on-a-cluster) or [GPU](https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/progressive.md#gpu-acceleration) to speed it up.
-### MAF export
+### 2.2 MAF export
 ```
 hal2maf --maxBlockLen 100000 --noAncestors --noDupes --onlyOrthologs --unique --refGenome Sp1 SpAll.hal stdout|taffy view|taffy add-gap-bases -a SpAll.hal|taffy norm -k -d |mafFilter -m - -N 0.95 |mafDuplicateFilter -m - -k |bgzip >SpAll_ref_Sp1.maf.gz
 ```
