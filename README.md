@@ -3,6 +3,7 @@ SNGFinder is a tool for identifying new genes based on the syntenic method. It r
 # Installation
 
 # How to use
+Identifying new genes requires the following steps:  
 1. [Repeat masker](#1-repeat-masker)
 2. [Whole genome alignment](#2-whole-genome-alignment)
 3. [Identification of new genes](#3-identification-of-new-genes)
