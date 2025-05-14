@@ -18,7 +18,9 @@ windowmasker -ustat genome.counts -in genome.fasta -out genome_masked.fasta -dus
 cactus --binariesMode local --defaultMemory 100G --defaultDisk 30G job_store SpAll.txt SpAll.hal
 ```
 `job_store` is used to store intermediate files.  
-`SpAll.txt` is a text file containing the locations of the input sequences as well as their phylogenetic tree. For a detailed explanation of this file, please refer to the [cactus documentation](https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/progressive.md#interface). The file is formatted as follows:  
+`SpAll.txt` is a text file containing the locations of the input sequences as well as their phylogenetic tree.  
+For a detailed explanation of this file, please refer to the [cactus documentation](https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/progressive.md#interface).  
+The file is formatted as follows:  
 ```
 (Sp1:0.23781,((Sp2:0.335387,Sp3:0.399047)N2:0.0755071,((Sp4:0.0245695,Sp5:0.0279553)N4:0.0525508,(Sp6:0.0735841,(Sp7:0.072269,(Sp8:0.0329604,Sp9:0.0467526)N7:0.0277942)N6:0.028579)N5:0.0253669)N3:0.281769)N1:0.23781)N0;
 Sp1 Sp1_genome.fasta.gz
