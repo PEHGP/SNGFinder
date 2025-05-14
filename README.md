@@ -4,9 +4,9 @@ SNGFinder is a tool for identifying new genes based on the syntenic method. It r
 
 # How to use
 ## 1. Repeat masker
-If the genome has been repeat soft-masked, skip this step.
-The genomes downloaded from NCBI or ensemble usually have been repeat soft-masked.
-`RepeatMasker` is recommended, but `WindowMasker` is used here.
+If the genome has been repeat soft-masked, skip this step.  
+The genomes downloaded from NCBI or ensemble usually have been repeat soft-masked.  
+`RepeatMasker` is recommended, but `WindowMasker` is used here.  
 ```
 windowmasker -mk_counts -in genome.fasta -out genome.counts
 windowmasker -ustat genome.counts -in genome.fasta -out genome_masked.fasta -dust true -outfmt fasta
