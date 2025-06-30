@@ -80,4 +80,5 @@ SNGFinder.py --prefix TestSp9 --maf SpAll_ref_Sp1.maf.gz --target target --refsp
 ```
 **Detailed parameters**  
 ### Output
+
 # How to cite
