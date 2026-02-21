@@ -675,7 +675,7 @@ def PrepareData(Target,Prefix,Args):
 	else:
 		BlastOut=Args.blastout
 	if not Args.blastpickle:
-		Blastd=GetBlastd("%s_protein_blast.out"%Prefix,TransToGened,Prefix)
+		Blastd=GetBlastd("%s_protein_blast.out"%Prefix,TransToGened)
 		with open("%s_Blastd.pickle"%Prefix,"wb") as f:
 			pickle.dump(Blastd,f)
 	else:
@@ -700,7 +700,7 @@ def PrepareData(Target,Prefix,Args):
 		with open(Args.allgenepickle,"rb") as f:
 			AllGened=pickle.load(f)
 	return Fd,TransToGened,GeneToTransd,AllGened,ProteinSeqd,Blastd,BlastOut,OutGroupSpList
-def GetBlastd(OriginalBlastOut,TransToGened,Prefix):
+def GetBlastd(OriginalBlastOut,TransToGened):
 	length=int(os.popen("wc -l %s"%OriginalBlastOut).readlines()[0].split()[0])
 	d=collections.defaultdict(list)
 	for x in tqdm(open(OriginalBlastOut),total=length):
@@ -711,7 +711,7 @@ def GetBlastd(OriginalBlastOut,TransToGened,Prefix):
 	for n in d:
 		Blastd[n]=sorted(d[n])[-1]
 	return Blastd
-def CheckTarget(Target):
+def CheckTarget(Target,Args):
 	if not os.path.exists(Target):
 		print("Target file does not exist:", Target)
 		sys.exit(1)		
@@ -757,30 +757,39 @@ def CheckTarget(Target):
 	if not "in" in tl or not "out" in tl:
 		print("Target file should specify at least one species as 'in' and one as 'out' for outgroup.")
 		sys.exit(1)
+	if Args.refspecies not in spl:
+		print("Reference species (%s) is not in the target file."%Args.refspecies)
+		sys.exit(1)
+	if Args.outgroupfile:
+		for sp in open(Args.outgroupfile,"r"):
+			sp=sp.rstrip()
+			if sp not in spl:
+				print("Outgroup species %s is not in the target file."%sp)
+				sys.exit(1)
 def GetParser():
 	parser = argparse.ArgumentParser(prog='SNGFinder',description='Identifying new genes based on the syntenic method.')
 	parser.add_argument('--prefix', required=True,help='Result file prefix.')
 	parser.add_argument('--maf', required=True,help="Whole-genome multiple sequence alignment file in maf format.")
 	parser.add_argument("--target",required=True,help="A target file.")
-	parser.add_argument("--blastpickle",required=False,help="The pickle file that stores the best alignment results of blast.")
-	parser.add_argument("--proteinpickle",required=False,help="The pickle file that stores the protein sequence.")
+	parser.add_argument("--blastpickle",required=False,help="The pickle file that stores the best alignment results of blast. if this file is provided, skip the GetBlastd function.")
+	parser.add_argument("--proteinpickle",required=False,help="The pickle file that stores the protein sequence. if this file is provided, it is not necessary to read the protein sequence from the FASTA file.")
 	parser.add_argument("--genetotranspickle",required=False,help="The pickle file that stores the correspondence between genes and transcripts.")
 	parser.add_argument("--transtogenepickle",required=False,help="The pickle file that stores the corresponding between transcripts and genes.")
 	parser.add_argument("--allgenepickle",required=False,help="The pickle file that stores all gene names for each species.")
 	parser.add_argument("--blastout",required=False,help="all vs. all blast results.")
-	parser.add_argument("--syntenicpickle",required=False,help="")
-	parser.add_argument("--blockpickle",required=False,help="")
-	parser.add_argument("--thpickle",required=False,help="") #GenePairsScored
-	parser.add_argument("--chimericlistfile",required=False,help="")
-	parser.add_argument("--refspecies",required=True,help="")
-	parser.add_argument("--outgroupfile",required=False,help="")
-	parser.add_argument("--dnaidentify",type=float,default=0.5,help="")
-	parser.add_argument("--inflation",type=float,default=3,help="")
-	parser.add_argument("--overlapth",type=float,default=0.05,help="")
-	parser.add_argument("--leftpercentile",type=float,default=20,help="")
-	parser.add_argument("--rightpercentile",type=float,default=100,help="")
-	parser.add_argument("--nochimeras",action='store_true',help="")
-	parser.add_argument("--nounannotated",action='store_true',help="")
+	parser.add_argument("--syntenicpickle",required=False,help="The pickle file that stores the syntenic information between species. If this file is provided, skip the GetSyntenic function.")
+	parser.add_argument("--blockpickle",required=False,help="The pickle file that stores the syntenic gene block information between species. If this file is provided, skip the GetSyntenicGene function.")
+	parser.add_argument("--thpickle",required=False,help="The pickle file that stores the threshold for judging ortholog or paralog. If this file is provided, skip the GetRBH function.")
+	parser.add_argument("--chimericlistfile",required=False,help="The file that stores the list of chimeric genes. If this file is provided, skip the GetChimeras function.")
+	parser.add_argument("--refspecies",required=True,help="Reference species name, which should be consistent with the species name in the target file.")
+	parser.add_argument("--outgroupfile",required=False,help="The file that stores the outgroup species, one species per line. If this file is provided, the outgroup species will be determined based on this file instead of the target file.")
+	parser.add_argument("--dnaidentify",type=float,default=0.5,help="The threshold for judging ortholog based on DNA sequence identity. If the identity of the best blast hit in the syntenic region is greater than or equal to this threshold, it will be considered as an ortholog.")
+	parser.add_argument("--inflation",type=float,default=3,help="The inflation parameter for MCL clustering of paralog genes. The larger the value, the finer the clustering.")
+	parser.add_argument("--overlapth",type=float,default=0.05,help="Maximum overlap between blast hits allowed when judging chimeric genes.")
+	parser.add_argument("--leftpercentile",type=float,default=20,help="The left percentile of the blast hits bit score distribution used to judge chimeric genes. If the blast hits bit score is less than this percentile, it will be removed.")
+	parser.add_argument("--rightpercentile",type=float,default=100,help="The right percentile of the blast hits bit score distribution used to judge chimeric genes. If the blast hits bit score is greater than this percentile, it will be removed.")
+	parser.add_argument("--nochimeras",action='store_true',help="If this option is set, the chimeric genes will not be identified.")
+	parser.add_argument("--nounannotated",action='store_true',help="If this option is set, the unannotated genes will not be identified.")
 	return parser
 if __name__ == '__main__':
 	Parser=GetParser()
@@ -798,7 +807,7 @@ if __name__ == '__main__':
 	RightPercentile=Args.rightpercentile
 	#OutGroupSpList=[x.rstrip() for x in open(OutGroupFile)]
 	#print("GeneDnaPairsIdentify type",type(GeneDnaPairsIdentify))
-	CheckTarget(Target)
+	CheckTarget(Target, Args)
 	Fd,TransToGened,GeneToTransd,AllGened,ProteinSeqd,Blastd,BlastOut,OutGroupSpList=PrepareData(Target,Prefix,Args)
 	if not Args.syntenicpickle:
 		Syntenicd=GetSyntenic(MafFile,Prefix)
