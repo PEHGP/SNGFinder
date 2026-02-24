@@ -9,7 +9,7 @@ Identifying new genes requires the following steps:
 3. [Identification of new genes](#3-identification-of-new-genes)
 ## 1. Repeat masker
 If the genome has been repeat soft-masked, skip this step.  
-The genomes downloaded from NCBI or ensemble usually have been repeat soft-masked.  
+The genomes downloaded from NCBI or Ensembl usually have been repeat soft-masked.  
 `RepeatMasker` is recommended, but `WindowMasker` is used here.  
 ```
 windowmasker -mk_counts -in genome.fasta -out genome.counts
@@ -25,8 +25,8 @@ cactus --binariesMode local --defaultMemory 100G --defaultDisk 30G job_store SpA
 `job_store` is used to store intermediate files.  
 `SpAll.txt` is a text file containing the locations of the input sequences as well as their phylogenetic tree.  
   
-For a detailed explanation of this file, please refer to the [cactus documentation](https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/progressive.md#interface). 
-  
+For a detailed explanation of this file, please refer to the [cactus documentation](https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/progressive.md#interface).  
+`SpAll.hal` is cactus output  
 **The file is formatted as follows:**  
 ```
 (Sp1:0.23781,((Sp2:0.335387,Sp3:0.399047)N2:0.0755071,((Sp4:0.0245695,Sp5:0.0279553)N4:0.0525508,(Sp6:0.0735841,(Sp7:0.072269,(Sp8:0.0329604,Sp9:0.0467526)N7:0.0277942)N6:0.028579)N5:0.0253669)N3:0.281769)N1:0.23781)N0;
@@ -42,7 +42,6 @@ Sp9 Sp9_genome.fasta
 ```
 > [!NOTE]
 >The species name in the `SpAll.txt` can not include `.`.  
-`SpAll.hal` is cactus output  
 [Cactus](https://github.com/ComparativeGenomicsToolkit/cactus) may be slow, so you can use a [cluster](https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/progressive.md#running-on-a-cluster) or [GPU](https://github.com/ComparativeGenomicsToolkit/cactus/blob/master/doc/progressive.md#gpu-acceleration) to speed it up.
 ### 2.2 MAF export
 ```
@@ -84,6 +83,56 @@ SNGFinder.py --prefix TestSp9 --maf SpAll_ref_Sp1.maf.gz --target target --refsp
 `--refspecies` the focus species for identifying new genes.  
   
 **Detailed parameters**  
+```
+SNGFinder.py -h
+usage: SNGFinder.py --prefix TestSp9 --maf SpAll_ref_Sp1.maf.gz --target target --refspecies Sp1
+
+Identifying new genes based on the syntenic method.
+
+options:
+  -h, --help            show this help message and exit
+  --prefix PREFIX       Result file prefix.
+  --maf MAF             Whole-genome multiple sequence alignment file in maf format.
+  --target TARGET       A target file.
+  --blastpickle BLASTPICKLE
+                        The pickle file that stores the best alignment results of blast. if this file is provided, skip the GetBlastd function.
+  --proteinpickle PROTEINPICKLE
+                        The pickle file that stores the protein sequence. if this file is provided, it is not necessary to read the protein sequence from the FASTA file.
+  --genetotranspickle GENETOTRANSPICKLE
+                        The pickle file that stores the correspondence between genes and transcripts.
+  --transtogenepickle TRANSTOGENEPICKLE
+                        The pickle file that stores the corresponding between transcripts and genes.
+  --allgenepickle ALLGENEPICKLE
+                        The pickle file that stores all gene names for each species.
+  --blastout BLASTOUT   all vs. all blast results.
+  --syntenicpickle SYNTENICPICKLE
+                        The pickle file that stores the syntenic information between species. If this file is provided, skip the GetSyntenic function.
+  --blockpickle BLOCKPICKLE
+                        The pickle file that stores the syntenic gene block information between species. If this file is provided, skip the GetSyntenicGene function.
+  --thpickle THPICKLE   The pickle file that stores the threshold for judging ortholog or paralog. If this file is provided, skip the GetRBH function.
+  --chimericlistfile CHIMERICLISTFILE
+                        The file that stores the list of chimeric genes. If this file is provided, skip the GetChimeras function.
+  --refspecies REFSPECIES
+                        Reference species name, which should be consistent with the species name in the target file.
+  --outgroupfile OUTGROUPFILE
+                        The file that stores the outgroup species, one species per line. If this file is provided, the outgroup species will be determined based on this file
+                        instead of the target file.
+  --dnaidentify DNAIDENTIFY
+                        The threshold for judging ortholog based on DNA sequence identity. If the identity of the best blast hit in the syntenic region is greater than or equal
+                        to this threshold, it will be considered as an ortholog.
+  --inflation INFLATION
+                        The inflation parameter for MCL clustering of paralog genes. The larger the value, the finer the clustering.
+  --overlapth OVERLAPTH
+                        Maximum overlap between blast hits allowed when judging chimeric genes.
+  --leftpercentile LEFTPERCENTILE
+                        The left percentile of the blast hits bit score distribution used to judge chimeric genes. If the blast hits bit score is less than this percentile, it
+                        will be removed.
+  --rightpercentile RIGHTPERCENTILE
+                        The right percentile of the blast hits bit score distribution used to judge chimeric genes. If the blast hits bit score is greater than this percentile,
+                        it will be removed.
+  --nochimeras          If this option is set, the chimeric genes will not be identified.
+  --nounannotated       If this option is set, the unannotated genes will not be identified.
+```
 ### Output
 
 # How to cite
