@@ -1,7 +1,21 @@
 # SNGFinder
 SNGFinder is a tool for identifying new genes based on the syntenic method. It requires a focal species (the species for which the new gene needs to be identified), species of the same lineage or genus as the focal species, and outgroup species. Syntenic regions are obtained based on whole genome alignment, and clusters of genes orthologous to the focal species genes are obtained within the same syntenic region. If a focal species gene has no orthologous genes in any outgroup in a orthologous cluster, then the gene is a new gene. In addition, SNGFinder can classify new genes into copy number variation genes, duplicate genes, and orphan genes based on the origin mechanism.
 # Installation
-
+```
+conda env create -f environment.yml -n SNGFinder
+conda activate SNGFinder
+pip install brotli
+wget https://github.com/ComparativeGenomicsToolkit/cactus/releases/download/v3.1.4/cactus-bin-v3.1.4.tar.gz
+tar xvzf cactus-bin-v3.1.4.tar.gz
+cd cactus-bin-v3.1.4
+python ./setup.py install
+export PATH="$(pwd)/bin:$PATH" #important
+cd ..
+pip install git+https://github.com/PEHGP/SNGFinder.git
+```
+   
+> [!NOTE]
+> When the current Shell session is closed or exited, it is necessary to re-export PATH.
 # How to use
 Identifying new genes requires the following steps:  
 1. [Repeat masker](#1-repeat-masker)
@@ -139,5 +153,13 @@ options:
   --nounannotated       If this option is set, the unannotated genes will not be identified.
 ```
 ### Output
-
+`TestSp9_NewGenesOrphan.xls` Orphan genes in focus species
+  
+`TestSp9_NewGenesRepeat.xls` 
+  
+`TestSp9_NewGenesParalog.xls`
+  
+`TestSp9_OrthoGroupCluster.xls`
+  
+`TestSp9_ChimerasTrans.xls`
 # How to cite
