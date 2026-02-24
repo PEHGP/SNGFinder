@@ -767,7 +767,7 @@ def CheckTarget(Target,Args):
 				print("Outgroup species %s is not in the target file."%sp)
 				sys.exit(1)
 def GetParser():
-	parser = argparse.ArgumentParser(prog='SNGFinder',description='Identifying new genes based on the syntenic method.')
+	parser = argparse.ArgumentParser(description='Identifying new genes based on the syntenic method.',usage='SNGFinder --prefix TestSp9 --maf SpAll_ref_Sp1.maf.gz --target target --refspecies Sp1')
 	parser.add_argument('--prefix', required=True,help='Result file prefix.')
 	parser.add_argument('--maf', required=True,help="Whole-genome multiple sequence alignment file in maf format.")
 	parser.add_argument("--target",required=True,help="A target file.")
@@ -791,7 +791,7 @@ def GetParser():
 	parser.add_argument("--nochimeras",action='store_true',help="If this option is set, the chimeric genes will not be identified.")
 	parser.add_argument("--nounannotated",action='store_true',help="If this option is set, the unannotated genes will not be identified.")
 	return parser
-if __name__ == '__main__':
+def main():
 	Parser=GetParser()
 	Args = Parser.parse_args()
 	Prefix=Args.prefix
@@ -853,3 +853,5 @@ if __name__ == '__main__':
 	Df=FilterOrthoCluster(GenePairsScored,GeneDnaPairsIdentify,OrthoCluster,OrthoDNA,TransProtein,RefSp,Prefix,NoUnannotated)
 	RepeatGeneList,ParalogGeneList=GetRepeatAndParalogGene(Df.copy(),RefSp,Blastd,GenePairsScored,ProteinSeqd,GeneToTransd,AllGened,TransToGened,Inflation,Prefix)
 	GetGeneClassify(Df.copy(),ChimerasGenesList,RepeatGeneList,ParalogGeneList,OutGroupSpList,RefSp,Prefix)
+if __name__ == '__main__':
+	main()
