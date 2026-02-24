@@ -85,7 +85,7 @@ Sp7 Sp7_genome.fasta.gz Sp7_protein.faa.gz  Sp7_gene.bed    Sp7_gene_to_protein.
 Sp8 Sp8_genome.fasta.gz Sp8_protein.faa.gz  Sp8_gene.bed    Sp8_gene_to_protein.txt out
 Sp9 Sp9_genome.fasta.gz Sp9_protein.faa.gz  Sp9_gene.bed    Sp9_gene_to_protein.txt out
 ```
-The `target` file has six columns, each separated by the tab key.  
+The `target` file has six columns, each separated by the `tab` key.  
 The `first column` is species name.  
 The `second column` is the fasta genome sequence.  
 The `third column` is the fasta protein sequence.  
@@ -162,4 +162,6 @@ options:
 `TestSp9_OrthoGroupCluster.xls` Genes that are orthologous to the genes of the focus species.  
   
 `TestSp9_ChimerasTrans.xls` Potential chimeric genes in the focal species. If the genes in the focus species are separated by commas, it is fission in the focus species; if there is only one gene in the focus species, it is fusion. The other columns represent the genes supporting this chimeric gene in other species.
+
+In the table, genes containing the word `translocation` indicate that translocation may have occurred at that position, while genes containing `*_region*::*:*-*.pep*` indicate unannotated genes.  
 # How to cite
