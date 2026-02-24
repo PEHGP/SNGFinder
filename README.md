@@ -2,16 +2,17 @@
 SNGFinder is a tool for identifying new genes based on the syntenic method. It requires a focal species (the species for which the new gene needs to be identified), species of the same lineage or genus as the focal species, and outgroup species. Syntenic regions are obtained based on whole genome alignment, and clusters of genes orthologous to the focal species genes are obtained within the same syntenic region. If a focal species gene has no orthologous genes in any outgroup in a orthologous cluster, then the gene is a new gene. In addition, SNGFinder can classify new genes into copy number variation genes, duplicate genes, and orphan genes based on the origin mechanism.
 # Installation
 ```
-conda env create -f environment.yml -n SNGFinder
+git clone https://github.com/PEHGP/SNGFinder.git
+conda env create -f SNGFinder/environment.yml -n SNGFinder
 conda activate SNGFinder
-pip install brotli
 wget https://github.com/ComparativeGenomicsToolkit/cactus/releases/download/v3.1.4/cactus-bin-v3.1.4.tar.gz
 tar xvzf cactus-bin-v3.1.4.tar.gz
 cd cactus-bin-v3.1.4
 python ./setup.py install
 export PATH="$(pwd)/bin:$PATH" #important
+cd ../SNGFinder
+python ./setup.py install
 cd ..
-pip install git+https://github.com/PEHGP/SNGFinder.git
 ```
    
 > [!NOTE]
