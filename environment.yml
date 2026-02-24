@@ -1,0 +1,16 @@
+channels:
+  - defaults
+dependencies:
+  - python=3.12.12
+  - blast
+  - pytest
+  - sonlib
+  - biopython
+  - tqdm
+  - pandas
+  - ete4
+  - brotli
+  - mcl
+  - miniprot
+  - fasttree
+  - trimal
