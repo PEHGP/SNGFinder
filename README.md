@@ -153,13 +153,13 @@ options:
   --nounannotated       If this option is set, the unannotated genes will not be identified.
 ```
 ### Output
-`TestSp9_NewGenesOrphan.xls` Orphan genes in focus species
+`TestSp9_NewGenesOrphan.xls` Orphan genes in focus species. The other columns represent genes that are orthologous to the genes of the focal species.  
   
-`TestSp9_NewGenesRepeat.xls` 
+`TestSp9_NewGenesRepeat.xls` CNV genes in focus species. The other columns represent genes that are orthologous to the genes of the focal species. Which genes in the focus species are CNV with each other is not provided in this table. You can search for the information in the `TestSp9_RepeatList.txt` file.  
   
-`TestSp9_NewGenesParalog.xls`
+`TestSp9_NewGenesParalog.xls` Duplicated genes in focus species. The other columns represent genes that are orthologous to the genes of the focal species. Which genes in the focus species are duplicated with each other is not provided in this table. You can search for them in the `TestSp9_paralog_mcl.out` file, but don't forget to exclude the CNVs in the `TestSp9_RepeatList.txt` file.  
   
-`TestSp9_OrthoGroupCluster.xls`
+`TestSp9_OrthoGroupCluster.xls` Genes that are orthologous to the genes of the focus species.  
   
-`TestSp9_ChimerasTrans.xls`
+`TestSp9_ChimerasTrans.xls` Potential chimeric genes in the focal species. If the genes in the focus species are separated by commas, it is fission in the focus species; if there is only one gene in the focus species, it is fusion. The other columns represent the genes supporting this chimeric gene in other species.
 # How to cite
