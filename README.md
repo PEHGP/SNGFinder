@@ -23,15 +23,17 @@ Identifying new genes requires the following steps:
 2. [Whole genome alignment](#2-whole-genome-alignment)
 3. [Identification of new genes](#3-identification-of-new-genes)
 ## 1. Repeat masker
-If the genome has been repeat soft-masked, skip this step.  
-The genomes downloaded from NCBI or Ensembl usually have been repeat soft-masked.  
-`RepeatMasker` is recommended, but `WindowMasker` is used here.  
 ```
 windowmasker -mk_counts -in genome.fasta -out genome.counts
 windowmasker -ustat genome.counts -in genome.fasta -out genome_masked.fasta -dust true -outfmt fasta
 ```
-`genome_masked.fasta` is the repeat soft-masking fasta file for whole genome alignment.
-
+`genome_masked.fasta` is the repeat soft-masking fasta file for whole genome alignment.  
+  
+> [!NOTE]
+> `RepeatMasker` is recommended, but `WindowMasker` is used here.
+> If the genome has been repeat soft-masked, skip this step.  
+> The genomes downloaded from NCBI or Ensembl usually have been repeat soft-masked.  
+  
 ## 2. Whole genome alignment
 ### 2.1 Alignment
 ```
