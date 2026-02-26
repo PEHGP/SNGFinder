@@ -1,0 +1,10 @@
+(Nakaseomyces_glabratus:0.23781,((Naumovozyma_castellii:0.335387,Kazachstania_africana:0.399047)N2:0.0755071,((Saccharomyces_uvarum:0.0245695,Saccharomyces_eubayanus:0.0279553)N4:0.0525508,(Saccharomyces_kudriavzevii:0.0735841,(Saccharomyces_mikatae:0.072269,(Saccharomyces_paradoxus:0.0329604,Saccharomyces_cerevisiae:0.0467526)N7:0.0277942)N6:0.028579)N5:0.0253669)N3:0.281769)N1:0.23781)N0;
+Saccharomyces_cerevisiae	genome_Saccharomyces_cerevisiae.fasta
+Saccharomyces_kudriavzevii	genome_Saccharomyces_kudriavzevii.fasta
+Saccharomyces_mikatae	genome_Saccharomyces_mikatae.fasta
+Saccharomyces_paradoxus	genome_Saccharomyces_paradoxus.fasta
+Saccharomyces_uvarum	genome_Saccharomyces_uvarum.fasta
+Kazachstania_africana	genome_Kazachstania_africana.fasta
+Nakaseomyces_glabratus	genome_Nakaseomyces_glabratus.fasta
+Saccharomyces_eubayanus	genome_Saccharomyces_eubayanus.fasta
+Naumovozyma_castellii	genome_Naumovozyma_castellii.fasta

@@ -1,0 +1,172 @@
+Group	Saccharomyces_cerevisiae	Saccharomyces_paradoxus	Saccharomyces_eubayanus	Saccharomyces_kudriavzevii	Saccharomyces_mikatae	Saccharomyces_uvarum	Naumovozyma_castellii	Kazachstania_africana	Nakaseomyces_glabratus
+OrthoGroup5264	YOR142W-A								
+OrthoGroup5313	YOR192C-A								
+OrthoGroup106	YBL100W-A								
+OrthoGroup558	YCL020W								
+OrthoGroup2151	YGR038C-A		DI49_4463:translocation						
+OrthoGroup944	YDR034C-C								
+OrthoGroup3892	YLR256W-A								
+OrthoGroup1170	YDR261W-A								
+OrthoGroup5025	YOL103W-A								
+OrthoGroup4279	YMR051C								
+OrthoGroup201	YBL005W-A								
+OrthoGroup1078	YDR170W-A								
+OrthoGroup4042	YLR410W-A								
+OrthoGroup4610	YNL284C-A								
+OrthoGroup73	YAR010C								
+OrthoGroup2686	YHR214C-C								
+OrthoGroup5455	YOR343W-A								
+OrthoGroup1173	YDR261C-C				SMKI_06G1890:translocation				
+OrthoGroup1276	YDR365W-A								
+OrthoGroup3136	YJR026W								
+OrthoGroup3138	YJR028W								
+OrthoGroup5931	YPR158W-A								
+OrthoGroup5932	YPR158C-C								
+OrthoGroup4830	YNL054W-A								
+OrthoGroup5910	YPR137C-A								
+OrthoGroup2135	YGR027W-A								
+OrthoGroup1121	YDR210C-C								
+OrthoGroup2270	YGR161W-A								
+OrthoGroup2271	YGR161C-C								
+OrthoGroup1009	YDR098C-A								
+OrthoGroup1225	YDR316W-A								
+OrthoGroup1670	YER137C-A								
+OrthoGroup4188	YML040W								
+OrthoGroup4274	YMR046C								
+OrthoGroup217	YBR012W-A								
+OrthoGroup5531	YPL257W-A								
+OrthoGroup1445	YEL075C								
+OrthoGroup1443	YEL076C-A								
+OrthoGroup4092	YLR464W	Saccharomyces_paradoxus_region1::NC_047488.1:11088-12094.pep1							
+OrthoGroup2693	YIL177C								
+OrthoGroup2905	YJL225C								
+OrthoGroup1442	YEL077C		DI49_3474:translocation	SKDI_03G1595					
+OrthoGroup2400	YHL050C								
+OrthoGroup1733	YFL065C	Saccharomyces_paradoxus_region1::NC_047500.1:5066-5372.pep0							
+OrthoGroup2401	YHL049C								
+OrthoGroup5977	YPR203W								
+OrthoGroup95	YBL112C								
+OrthoGroup96	YBL111C								
+OrthoGroup1732	YFL066C	Saccharomyces_paradoxus_region1::NC_047500.1:2306-3482.pep0							
+OrthoGroup5978	YPR204W								
+OrthoGroup6008	YLL067C								
+OrthoGroup94	YBL113C								
+OrthoGroup2692	YHR219W								
+OrthoGroup4093	YLR466W	Saccharomyces_paradoxus_region1::NC_047488.1:7333-11507.pep0							
+OrthoGroup4094	YLR467W	Saccharomyces_paradoxus_region1::NC_047488.1:411-5828.pep0							
+OrthoGroup4095	YML133C								
+OrthoGroup4562	YNL339C								
+OrthoGroup5505	YOR396W								
+OrthoGroup5506	YPL283C								
+OrthoGroup6010	YLL066C								
+OrthoGroup3622	YLL025W	SPAR_L00340		SKDI_12G0320					
+OrthoGroup3683	YLR037C	SPAR_L00930	DI49_3566	SKDI_12G0910	SMKI_05G0050:translocation	SUVZ_12G0920			
+OrthoGroup673	YCR104W	Saccharomyces_paradoxus_region1::NC_047488.1:34096-34456.pep0		SKDI_03G0050		SUVZ_07G5090:translocation			
+OrthoGroup2903	YIR041W	Saccharomyces_paradoxus_region1::NC_047493.1:6072-6432.pep0	DI49_3953						
+OrthoGroup3270	YKL224C					SUVZ_14G3760:translocation			
+OrthoGroup5503	YOR394W	SPAR_O04920	DI49_1412:translocation	SKDI_01G0050:translocation		SUVZ_05G0860:translocation			
+OrthoGroup5507	YPL282C								
+OrthoGroup6019	YMR325W								
+OrthoGroup508	YBR301W	SPAR_G05030		Saccharomyces_kudriavzevii_region1::NC_079278.1:1107987-1108268.pep0	Saccharomyces_mikatae_region1::NC_079271.1:9621-9981.pep0	SUVZ_05G2710			
+OrthoGroup2397	YGR294W	SPAR_B03920:translocation		SKDI_01G0780:translocation					
+OrthoGroup0	YAL068C								
+OrthoGroup1861	YGL261C		DI49_4789:translocation						
+OrthoGroup2405	YHL046C								
+OrthoGroup2694	YIL176C								
+OrthoGroup2906	YJL223C								
+OrthoGroup5998	YDR542W				SMKI_04G7310				
+OrthoGroup4960	YNR076W	Saccharomyces_paradoxus_region1::NC_047491.1:11758-12118.pep0		SKDI_02G0010					
+OrthoGroup4968	YOL161C	SPAR_A00020:translocation				SUVZ_02G0010:translocation			
+OrthoGroup6001	YLL064C		DI49_1602:translocation		SMKI_07G3200:translocation				
+OrthoGroup509	YBR302C	Saccharomyces_paradoxus_region1::NC_047493.1:1105821-1106850.pep0							
+OrthoGroup678	YDL248W								
+OrthoGroup1735	YFL062W	SPAR_N00030	DI49_1322:translocation		SMKI_09G2060:translocation	SUVZ_14G0040:translocation			
+OrthoGroup2398	YGR295C	SPAR_M04450:translocation		SKDI_03G1580:translocation	SMKI_15G0050:translocation				
+OrthoGroup2403	YHL048W								
+OrthoGroup3269	YJR161C	SPAR_P00010:translocation							
+OrthoGroup4096	YML132W								
+OrthoGroup4563	YNL336W								
+OrthoGroup2679	YHR211W								
+OrthoGroup3583	YKR102W	SPAR_K03050	DI49_3472	SKDI_11G3110	SMKI_11G3080	SUVZ_11G3120			
+OrthoGroup84	YAR031W	Saccharomyces_paradoxus_region1::NC_047487.1:173754-174631.pep0							
+OrthoGroup85	YAR033W	SPAR_A00770			SMKI_01G0820:translocation				
+OrthoGroup2058	YGL051W								
+OrthoGroup507	YBR299W	SPAR_G05020	DI49_1598	SKDI_07G5430	SMKI_05G0080	SUVZ_02G0060			
+OrthoGroup2396	YGR292W								
+OrthoGroup2696	YIL172C	SPAR_I00030	DI49_3956	SKDI_02G4050	SMKI_09G0070	SUVZ_13G0030			
+OrthoGroup2908	YJL221C	SPAR_J00030							
+OrthoGroup4973	YOL157C	SPAR_O00030	DI49_1600:translocation	SKDI_15G0060:translocation	SMKI_15G0100	SUVZ_08G4050			
+OrthoGroup676	YCR107W	SPAR_B00040		Saccharomyces_kudriavzevii_region1::NC_079274.1:2502-3575.pep0	SMKI_01G0010				
+OrthoGroup3267	YJR159W			SKDI_14G3950:translocation	SMKI_15G5110:translocation				
+OrthoGroup2445	YHL009W-A								
+OrthoGroup3800	YLR156W								
+OrthoGroup3803	YLR157W-D								
+OrthoGroup3806	YLR157W-E								
+OrthoGroup6013	YLR159W								
+OrthoGroup6016	YLR161W								
+OrthoGroup1	YAL067W-A								
+OrthoGroup1862	YGL260W								
+OrthoGroup2406	YHL045W								
+OrthoGroup4959	YNR075C-A								
+OrthoGroup91	YAR066W	SPAR_A00820							
+OrthoGroup2684	YHR214W	SPAR_H02540							
+OrthoGroup679	YDL247W	Saccharomyces_paradoxus_region1::NC_047490.1:8614-10442.pep0		SKDI_04G0030	SMKI_06G3850				
+OrthoGroup3268	YJR160C	SPAR_D00030							
+OrthoGroup682	YDL244W	SPAR_D00060	DI49_5682:translocation	SKDI_10G0070:translocation	SMKI_04G0040	SUVZ_02G0090:translocation			
+OrthoGroup1739	YFL058W	SPAR_F00030		SKDI_14G0050					
+OrthoGroup3265	YJR156C	SPAR_J03320							
+OrthoGroup4567	YNL332W								
+OrthoGroup5501	YOR391C	SPAR_O04900							
+OrthoGroup5509	YPL280W								
+OrthoGroup6017	YMR322C								
+OrthoGroup93	YAR071W	SPAR_A00840	DI49_4804:translocation	SKDI_01G0920:translocation		SUVZ_08G0020:translocation			
+OrthoGroup2689	YHR215W	SPAR_H02560							
+OrthoGroup511	YCL069W	Saccharomyces_paradoxus_region1::NC_047489.1:38920-40294.pep0		SKDI_11G3140	SMKI_11G3110	SUVZ_16G4650			
+OrthoGroup3586	YKR105C	SPAR_K03070:translocation							
+OrthoGroup616	YCR039C	SPAR_C00940	DI49_0790	Saccharomyces_kudriavzevii_region1::NC_079274.1:214650-215226.pep0	SMKI_03G0970	Saccharomyces_uvarum_region1::OX365930.1:196192-196747.pep0			
+OrthoGroup672	YCR102C	SPAR_C01450		SKDI_07G3930	SMKI_12G5040:translocation				
+OrthoGroup4089	YLR460C								
+OrthoGroup951	YDR039C								
+OrthoGroup952	YDR040C								
+OrthoGroup1671	YER138W-A								
+OrthoGroup5999	YIL060W				Saccharomyces_mikatae_region1::NC_079264.1:249441-249863.pep0				
+OrthoGroup6007	YOR192C-C								
+OrthoGroup1726	YER188C-A								
+OrthoGroup4961	YNR077C								
+OrthoGroup4962	YOL166W-A								
+OrthoGroup1737	YFL060C		DI49_5680:translocation	SKDI_10G3580:translocation	SMKI_04G0020:translocation	SUVZ_13G4580:translocation			
+OrthoGroup4565	YNL334C								
+OrthoGroup2219	YGR109W-A								
+OrthoGroup2784	YIL082W-A								
+OrthoGroup2832	YIL029C	SPAR_I01290			SMKI_09G1365				
+OrthoGroup5850	YPR071W	Saccharomyces_paradoxus_region1::NC_047502.1:665447-666100.pep0		SKDI_16G3325	SMKI_16G2320				
+OrthoGroup5499	YOR389W	SPAR_O04880		SKDI_15G5230	SMKI_01G0950:translocation	SUVZ_13G4650:translocation			
+OrthoGroup5502	YOR393W								
+OrthoGroup5508	YPL281C								
+OrthoGroup6018	YMR323W								
+OrthoGroup90	YAR064W	Saccharomyces_paradoxus_region1::NC_047487.1:218075-218370.pep0							
+OrthoGroup2682	YHR213W-B	Saccharomyces_paradoxus_region1::NC_047494.1:519054-519349.pep0							
+OrthoGroup921	YDR012W	SPAR_D02330			SMKI_04G2370				
+OrthoGroup425	YBR219C	Saccharomyces_paradoxus_region1::NC_047488.1:679008-679807.pep1	Saccharomyces_eubayanus_region1::NC_030979.1:832768-833557.pep1	Saccharomyces_kudriavzevii_region1::NC_079273.1:643356-644149.pep1	Saccharomyces_mikatae_region1::NC_079257.1:657320-657620.pep1	Saccharomyces_uvarum_region1::OX365931.1:836533-837304.pep1			
+OrthoGroup1220	YDR312W	SPAR_D05030	DI49_0490	SKDI_04G5230		SUVZ_02G4240			
+OrthoGroup1277	YDR366C								
+OrthoGroup1718	YER181C								
+OrthoGroup5255	YOR133W	SPAR_O02650	DI49_4969	SKDI_15G2810	SMKI_15G2800	SUVZ_08G1690			
+OrthoGroup1449	YEL070W	SPAR_E00060		SKDI_05G0030	SMKI_05G0100	SUVZ_13G4570:translocation			
+OrthoGroup4956	YNR073C	SPAR_N03730		SKDI_14G3940	SMKI_12G0140				
+OrthoGroup2795	YIL069C	SPAR_I00950	DI49_2715	SKDI_09G0960	SMKI_09G0990	SUVZ_09G0950			
+OrthoGroup3539	YKR059W	SPAR_K02630	DI49_3430	SKDI_11G2670	SMKI_11G2640	SUVZ_11G2690			
+OrthoGroup1738	YFL059W	SPAR_N00050		SKDI_10G3570:translocation	SMKI_14G0060:translocation				
+OrthoGroup4566	YNL333W								
+OrthoGroup1865	YGL258W	SPAR_G00030	Saccharomyces_eubayanus_region1::NC_030972.1:13463-14081.pep0	SKDI_07G0080	SMKI_07G0060	SUVZ_13G0080			
+OrthoGroup5497	YOR387C	SPAR_O04860		SKDI_15G5210					
+OrthoGroup5589	YPL198W			SKDI_16G0800	SMKI_06G3070	SUVZ_16G0890			
+OrthoGroup2514	YHR053C	SPAR_H00960	DI49_2458	Saccharomyces_kudriavzevii_region1::NC_079279.1:191902-192079.pep0	Saccharomyces_mikatae_region1::NC_079263.1:204051-204228.pep0	Saccharomyces_uvarum_region1::OX365942.1:408964-409141.pep0			
+OrthoGroup2517	YHR055C								
+OrthoGroup3253	YJR145C	SPAR_J03220	DI49_3154	SKDI_10G3460	SMKI_10G3360	SUVZ_10G3260			
+OrthoGroup4561	YMR321C	SPAR_M04360	DI49_4409	SKDI_13G4510	SMKI_13G4390	SUVZ_13G4530			
+OrthoGroup4869	YNL018C								
+OrthoGroup4854	YNL033W	SPAR_N02730	DI49_4704	SKDI_14G2890	SMKI_14G2860	SUVZ_14G2880			
+OrthoGroup4868	YNL019C	SPAR_N02870:translocation	DI49_4718:translocation	SKDI_14G3030:translocation	SMKI_14G3000:translocation	SUVZ_14G3020:translocation			
+OrthoGroup5500	YOR390W	SPAR_O04890		SKDI_14G0030:translocation	SMKI_04G2400:translocation				
+OrthoGroup5510	YPL279C		DI49_0212:translocation			SUVZ_02G1470:translocation			
